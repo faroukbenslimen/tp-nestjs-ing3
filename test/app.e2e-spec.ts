@@ -23,9 +23,9 @@ describe('AppController (e2e)', () => {
       .expect('Hello World!');
   });
 
-  it('/travel (GET)', () => {
+  it('/travel (POST)', () => {
     return request(app.getHttpServer())
-      .get('/travel')
+      .post('/travel')
       .expect(200)
       .expect('Planifier un nouveau voyage ici');
   });
