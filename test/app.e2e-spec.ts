@@ -23,6 +23,13 @@ describe('AppController (e2e)', () => {
       .expect('Hello World!');
   });
 
+  it('/travel (GET)', () => {
+    return request(app.getHttpServer())
+      .get('/travel')
+      .expect(200)
+      .expect('Planifier un nouveau voyage ici');
+  });
+
   afterEach(async () => {
     await app.close();
   });
