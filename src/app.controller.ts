@@ -10,6 +10,11 @@ export class AppController {
     return 'Hello World!';
   }
 
+  @Get('travel')
+  findAll(): any {
+    return this.appService.findAll();
+  }
+
   
   @Post('app-name')
   getAppName(): string {
