@@ -28,4 +28,9 @@ export class AppService {
   findAll(): Travel[] {
     return this.getTravels();
   }
+
+  findOne(id: number): Travel | undefined {
+    return this.travels.find(travel => travel.id === id);
+  }
 }
+  
